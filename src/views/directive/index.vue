@@ -1,6 +1,6 @@
 <template>
   <div class="dialog">
-    <input v-model="value" v-anti-shake="getData" type="text">
+    <input v-model="value" v-focus v-anti-shake="getData" type="text">
   </div>
 </template>
 

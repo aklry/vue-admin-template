@@ -18,6 +18,14 @@ Vue.directive('anti-shake', {
   }
 })
 
+// 自动聚焦
+Vue.directive('focus', {
+  //  当被绑定的元素插入到dom中执行
+  inserted: function(ele) {
+    ele.focus()
+  }
+})
+
 import '@/styles/index.scss' // global css
 
 import App from './App'
