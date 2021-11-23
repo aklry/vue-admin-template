@@ -64,6 +64,11 @@
     "node": ">=8.9",
     "npm": ">= 3.0.0"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "license": "MIT",
   "config": {
     "commitizen": {
