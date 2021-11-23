@@ -1,8 +1,7 @@
 module.exports = {
-    extends: [
-      'cz'
-    ],
-    rules: {
-    }
-  };
-  
+  extends: [
+    '@commitlint/config-conventional'
+  ],
+  rules: {
+  }
+};
