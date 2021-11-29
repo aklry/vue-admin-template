@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/en' // lang i18n
-
+import Index from '@/src/views/dialog/file/index.js'
 Vue.directive('anti-shake', {
   inserted: function(el, binding) {
     let timer = null
@@ -17,7 +17,7 @@ Vue.directive('anti-shake', {
     })
   }
 })
-
+Vue.use(Index)
 // 自动聚焦
 Vue.directive('focus', {
   //  当被绑定的元素插入到dom中执行
