@@ -103,6 +103,18 @@ export const constantRoutes = [
       },
     ],
   },
+  {
+    path: "/dialog",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "Dialog",
+        component: () => import("@/views/dialog/index"),
+        meta: { title: "Dialog", icon: "form" },
+      },
+    ],
+  },
 
   {
     path: "/nested",
