@@ -6,11 +6,6 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 import Index from '@/views/dialog/file/index.js'
-<<<<<<< HEAD
-=======
-
-Vue.use(Index)
->>>>>>> feature-template-1.0.1-aklry
 Vue.directive('anti-shake', {
   inserted: function(el, binding) {
     let timer = null
