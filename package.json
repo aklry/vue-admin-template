@@ -16,6 +16,8 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "axios": "0.18.1",
     "core-js": "3.6.5",
     "element-ui": "2.13.2",
