@@ -5,33 +5,37 @@ let instance = null
 const Builder = Vue.extend(Message)
 
 class GetComponent {
-  constructor(options) {
-      this.options = options
+  constructor(options, content) {
+    this.options = options
+    this.content = content
   }
   init() {
+    if (instance) return
     instance = new Builder({
-      render: (createElement) => {
-        return createElement(Message, {
-          props: {
-            title: { ...this.options }
-          }
-        })
+      render: (h) => {
+        return (
+          <Message props={{
+            ...this.options
+          }} scopedSlots={{ default: () => this.content.btn }}/>
+        )
       }
     })
+    setTimeout(() => {
+      this.hide()
+    }, 3000)
     instance.vm = instance.$mount()
     document.body.appendChild(instance.vm.$el)
     return instance
   }
   hide() {
-    instance.$el.remove()
+    console.log(1)
+    instance.vm.$el.remove()
     instance = null
   }
 }
-
-const getComponent = (options) => {
-  return new GetComponent(options)
+const getComponent = (options, content) => {
+  return new GetComponent(options, content)
 }
-
 export default {
   install(vue) {
     vue.prototype.$Message = getComponent
