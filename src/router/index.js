@@ -115,7 +115,11 @@ export const constantRoutes = [
       },
     ],
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> feature-template-1.0.1-aklry
   {
     path: "/nested",
     component: Layout,
